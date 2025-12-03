@@ -5,7 +5,7 @@ import Reasons from './components/sections/Reasons'
 import Services from './components/sections/Services'
 import Works from './components/sections/Works'
 import Testimonials from './components/sections/Testimonials'
-import Faq from './components/sections/FAQ'
+import Faq from './components/sections/Faq'
 import SocMedia from './components/sections/SocMedia'
 import Footer from './components/sections/Footer'
 

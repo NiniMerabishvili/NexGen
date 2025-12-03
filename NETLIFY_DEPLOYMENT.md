@@ -141,6 +141,7 @@ If your app uses environment variables:
 3. Verify all dependencies are in `package.json`
 4. Check for TypeScript errors: `npm run build` locally
 5. Ensure you're using the correct branch name (main/master)
+6. **Case-sensitive imports:** If you're developing on Windows/Mac, ensure import paths match exact file names (Linux is case-sensitive). Example: `import Faq from './Faq'` not `'./FAQ'`
 
 ### 404 Errors on Routes
 - The `netlify.toml` file includes redirect rules for SPA routing
