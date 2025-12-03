@@ -105,3 +105,74 @@ export const teamMembersData = [
 ];
 
 export const workImagesData = [work1, work2];
+
+export const testimonialsData = [
+  {
+    id: 1,
+    title: 'NEXGEN TURNED OUR BUSINESS AROUND!',
+    text: 'Their digital marketing strategies helped us reach new customers and increase our revenue by 30% within just a few months. Highly recommended!',
+    author: {
+      name: 'Sarah Thompson',
+      role: 'CEO of BlueBloom',
+      image: member1,
+    },
+  },
+  {
+    id: 2,
+    title: 'NEXGEN TURNED OUR BUSINESS AROUND!',
+    text: 'Their digital marketing strategies helped us reach new customers and increase our revenue by 30% within just a few months. Highly recommended!',
+    author: {
+      name: 'Wade Warren',
+      role: 'Art Director',
+      image: member2,
+    },
+  },
+  {
+    id: 3,
+    title: 'WORKING WITH NEXGEN WAS A PLEASURE.',
+    text: 'Their web design team created a stunning website that perfectly captured our brand\'s essence. The feedback from our customers has been overwhelmingly positive.',
+    author: {
+      name: 'Lisa Williams',
+      role: 'CEO Of HealthTech',
+      image: member3,
+    },
+  },
+  {
+    id: 4,
+    title: 'NEXGEN\'S WEB DESIGN TEAM BROUGHT OUR VISION TO LIFE.',
+    text: 'Their responsive design ensures our website looks stunning on all devices, contributing to increased user engagement.',
+    author: {
+      name: 'Jennifer Lee',
+      role: 'COO of Foodie Haven',
+      image: member4,
+    },
+  },
+];
+
+export const faqData = [
+  {
+    id: 1,
+    question: 'How long does it take to complete a web development project?',
+    answer: 'The timeline varies depending on the project\'s complexity and requirements. Our team strives to deliver projects on time while maintaining the highest quality standards.',
+  },
+  {
+    id: 2,
+    question: 'Can you handle large-scale mobile app development projects?',
+    answer: 'Yes, we have extensive experience in developing large-scale mobile applications. Our team is equipped to handle projects of any size and complexity.',
+  },
+  {
+    id: 3,
+    question: 'Can you integrate third-party APIs into our mobile app?',
+    answer: 'Absolutely! We specialize in integrating various third-party APIs and services to enhance your mobile app\'s functionality and user experience.',
+  },
+  {
+    id: 4,
+    question: 'How do you ensure cross-platform compatibility for mobile apps?',
+    answer: 'We use modern cross-platform frameworks and follow best practices to ensure your mobile app works seamlessly across iOS, Android, and other platforms.',
+  },
+  {
+    id: 5,
+    question: 'What is your approach to user experience (UX) design?',
+    answer: 'Our UX design approach focuses on understanding user needs, creating intuitive interfaces, and conducting thorough testing to ensure optimal user satisfaction.',
+  },
+];

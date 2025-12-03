@@ -26,6 +26,7 @@ module.exports = {
         },
         fontFamily: {
           sans: ['Roboto Flex', 'sans-serif'],
+          mono: ['Roboto Mono', 'monospace'],
         },
         container: {
           center: true,

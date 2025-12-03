@@ -8,11 +8,11 @@ const Works = () => {
       </div>
       
       <div className="w-[95%] mx-auto flex flex-col gap-4">
-        <div className="bg-[#0F0F0F] border-2 border-[#1A1A1A] rounded-xl p-4">
+        <div className="bg-[#0F0F0F] border-2 border-[#1A1A1A] rounded-xl p-3">
           <WorkList index={0} />
         </div>
         
-        <div className="bg-[#0F0F0F] border-2 border-[#1A1A1A] rounded-xl p-4">
+        <div className="bg-[#0F0F0F] border-2 border-[#1A1A1A] rounded-xl p-3">
           <WorkList index={1} />
         </div>
       </div>
