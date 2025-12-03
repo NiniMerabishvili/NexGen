@@ -90,16 +90,18 @@ const Hero = () => {
                 className="w-full h-full object-cover"
               />
 
-              <a
-                href="#works"
-                className="absolute top-4 right-4 z-10 hover:scale-110 transition-transform duration-300"
-              >
-                <img
-                  src={ButtonIcon}
-                  alt="Explore"
-                  className="w-20 h-20"
-                />
-              </a>
+              <div className="absolute top-3 right-2 z-10 w-20 h-20 bg-[#0F0F0F] rounded-full flex items-center justify-center">
+                <a
+                  href="#works"
+                  className="flex items-center justify-center hover:scale-110 transition-transform duration-300"
+                >
+                  <img
+                    src={ButtonIcon}
+                    alt="Explore"
+                    className="w-20 h-20"
+                  />
+                </a>
+              </div>
             </div>
 
             <div className="p-4 bg-[#1A1A1A]">

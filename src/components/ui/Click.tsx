@@ -4,9 +4,21 @@ interface ClickButtonProps {
 }
 
 const ClickButton = ({ text = 'BOOK A CALL', onClick }: ClickButtonProps) => {
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    } else {
+      // Scroll to contact section (footer)
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  };
+
   return (
     <button
-      onClick={onClick}
+      onClick={handleClick}
       className="w-full bg-[#CE7D63] hover:bg-[#B86A52] text-black font-medium uppercase text-sm py-3 px-8 rounded-xl transition-all duration-300 hover:opacity-90"
     >
       {text}

@@ -25,7 +25,7 @@ const TestimonialCard = ({ title, text, author }: TestimonialCardProps) => {
           <img
             src={author.image}
             alt={author.name}
-            className="w-10 h-10 rounded-full object-cover"
+            className="w-10 h-10 rounded-full object-cover bg-[#CE7D63]"
           />
           <div className="flex flex-col">
             <span className="text-xs text-white font-medium">

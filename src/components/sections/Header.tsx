@@ -37,7 +37,7 @@ const Header = () => {
                     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }
                 }}
-                className={`bg-[#0F0F0F] text-xs font-medium uppercase px-4 py-3 rounded-md transition-all duration-200 ${
+                className={`bg-[#0F0F0F] text-xs font-medium uppercase px-3 py-3 rounded-md transition-all duration-200 ${
                   isActive ? 'text-[#E7BEB1]' : 'text-[#81807E] hover:text-[#E7BEB1]'
                 }`}
               >

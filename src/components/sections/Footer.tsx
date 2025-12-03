@@ -174,7 +174,7 @@ const Footer = () => {
           <div className="bg-[#1A1A1A] rounded-2xl h-full p-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 border-t border-[#2A2A2A] pt-4">
               <p className="text-xs text-[#81807E]">
-                © 2024 NexGen. All rights reserved.
+                © 04.12.2025 Nini Merabishvili. All rights reserved.
               </p>
               <div className="flex items-center gap-4">
                 <a

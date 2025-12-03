@@ -18,16 +18,20 @@ const TeamMembersCard = ({ members }: TeamMembersCardProps) => {
         TEAM MEMBERS
       </h3>
 
-      <div className="flex gap-2">
+      <div className="flex gap-4">
         {team.map((member, index) => (
-          <img
+          <div
             key={member.id}
-            src={member.photoUrl}
-            alt={member.name}
-            className={`w-10 h-10 rounded-full border-4 border-[#1A1A1A] object-cover ${
+            className={`w-10 h-10 rounded-full border-4 border-[#1A1A1A] bg-[#E7BEB1] overflow-hidden ${
               index > 0 ? '-ml-4' : ''
             }`}
-          />
+          >
+            <img
+              src={member.photoUrl}
+              alt={member.name}
+              className="w-full h-full object-cover grayscale"
+            />
+          </div>
         ))}
       </div>
     </div>

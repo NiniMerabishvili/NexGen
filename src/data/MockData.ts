@@ -8,6 +8,10 @@ import member7 from '../assets/images/member7.png';
 import member8 from '../assets/images/member8.png';
 import member9 from '../assets/images/member9.png';
 import member10 from '../assets/images/member10.png';
+import member11 from '../assets/images/member11.png';
+import member12 from '../assets/images/member12.png';
+import member13 from '../assets/images/member13.png';
+import member14 from '../assets/images/member14.png';
 import work1 from '../assets/images/work1.png';
 import work2 from '../assets/images/work2.png';
 
@@ -114,7 +118,7 @@ export const testimonialsData = [
     author: {
       name: 'Sarah Thompson',
       role: 'CEO of BlueBloom',
-      image: member1,
+      image: member11,
     },
   },
   {
@@ -124,7 +128,7 @@ export const testimonialsData = [
     author: {
       name: 'Wade Warren',
       role: 'Art Director',
-      image: member2,
+      image: member12,
     },
   },
   {
@@ -134,7 +138,7 @@ export const testimonialsData = [
     author: {
       name: 'Lisa Williams',
       role: 'CEO Of HealthTech',
-      image: member3,
+      image: member13,
     },
   },
   {
@@ -144,7 +148,7 @@ export const testimonialsData = [
     author: {
       name: 'Jennifer Lee',
       role: 'COO of Foodie Haven',
-      image: member4,
+      image: member14,
     },
   },
 ];
