@@ -45,7 +45,7 @@ const Faq = () => {
   };
 
   return (
-    <section className="pt-16">
+    <section id="faq" className="pt-16 ">
       <div className="w-[95%] mx-auto bg-[#0F0F0F] rounded-xl p-4">
         <div className="bg-[#1A1A1A] rounded-xl p-6 mb-6">
           <div className="flex justify-between items-center">

@@ -176,3 +176,55 @@ export const faqData = [
     answer: 'Our UX design approach focuses on understanding user needs, creating intuitive interfaces, and conducting thorough testing to ensure optimal user satisfaction.',
   },
 ];
+
+export const footerCtaData = {
+  title: 'READY TO TRANSFORM YOUR DIGITAL PRESENCE?',
+  text: 'Take the first step towards digital success with NexGen by your side. Our team of experts is eager to craft tailored solutions that drive growth for your business.',
+  buttonText: 'GET IN TOUCH',
+};
+
+export const socialsData = [
+  {
+    id: 1,
+    name: 'Instagram',
+    title: 'INSTAGRAM',
+    description: 'Share visually appealing snippets of our latest web projects.',
+    href: '#instagram',
+    iconType: 'instagram',
+  },
+  {
+    id: 2,
+    name: 'Twitter',
+    title: 'TWITTER',
+    description: 'Tweet about interesting coding challenges you\'ve overcome.',
+    href: '#twitter',
+    iconType: 'twitter',
+  },
+  {
+    id: 3,
+    name: 'Dribbble',
+    title: 'DRIBBBLE',
+    description: 'Showcase design elements of our web projects.',
+    href: '#dribbble',
+    iconType: 'dribbble',
+  },
+  {
+    id: 4,
+    name: 'Behance',
+    title: 'BEHANCE',
+    description: 'Create detailed presentations for our projects.',
+    href: '#behance',
+    iconType: 'behance',
+  },
+];
+
+export const footerLinksData = {
+  Home: ['Why Us', 'About Us', 'Testimonials', 'FAQ\'s'],
+  Services: ['Web Development', 'App Development', 'Web Design', 'Digital Marketing'],
+  Projects: ['Klothink', 'Zenith', 'Novus', 'Apex'],
+  Blogs: [
+    { name: 'Business', soon: false },
+    { name: 'Design', soon: true },
+    { name: 'Development', soon: true },
+  ],
+};

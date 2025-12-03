@@ -5,7 +5,7 @@ const Testimonials = () => {
   const testimonials = useTestimonials();
 
   return (
-    <section className="pt-16">
+    <section id="careers" className="pt-16">
       <div className="w-[95%] mx-auto bg-[#0F0F0F] border-2 border-[#1A1A1A] rounded-xl p-4">
         <div className="bg-[#1A1A1A] rounded-xl p-4 mb-4">
           <div className="flex justify-between items-center">
@@ -38,7 +38,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {testimonials.map((testimonial) => (
             <TestimonialCard
               key={testimonial.id}

@@ -5,7 +5,7 @@ const Reasons = () => {
   const reasonsData = useReasons();
 
   return (
-    <section className="pt-16">
+    <section id="about" className="pt-14">
       <div className="w-[95%] mx-auto bg-[#0F0F0F] border-2 border-[#1A1A1A] rounded-xl p-4">
       <div className="bg-[#1A1A1A] rounded-xl p-6 uppercase">
             <h3>Reasons to Choose NexGen for Your Digital Journey</h3>

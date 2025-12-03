@@ -5,7 +5,7 @@ const Records = () => {
   const recordsData = useRecords();
 
   return (
-    <section className="pt-8">
+    <section id="home-records" className="py-2 md:pt-6">
       <div className="w-[95%] mx-auto">
         <div className="bg-[#0F0F0F] border-2 border-[#1A1A1A] rounded-3xl p-4">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">

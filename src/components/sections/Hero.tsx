@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react';
 import HeroImage from '../../assets/images/heroimage.png';
-import ArrowIcon from '../../assets/icons/arrow.svg';
 import RightArrowIcon from '../../assets/icons/right-arrow.svg';
-
+import ButtonIcon from '../../assets/icons/button.svg';
 const Hero = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -36,11 +35,11 @@ const Hero = () => {
   ];
 
   return (
-    <section className="pt-24">
+    <section id="home" className="pt-20">
       <div className="w-[95%] mx-auto mt-5">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <div className="lg:col-span-2 bg-[#1A1A1A] rounded-2xl w-full flex flex-col overflow-hidden">
-            <div className="px-10  pb-[10px] flex flex-col justify-center flex-1">
+          <div className="lg:col-span-2 bg-[#1A1A1A] rounded-xl w-full flex flex-col overflow-hidden">
+            <div className="px-10 py-4 md:py-6 pb-[10px] flex flex-col justify-center flex-1">
               <div className="flex items-center gap-4 mb-4">
                 <h1 className="text-5xl font-bold text-white leading-none tracking-tight">
                   DIGITAL SOLUTIONS
@@ -83,7 +82,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-1 relative rounded-[20px] overflow-hidden bg-[#1A1A1A] flex flex-col">
+          <div className="hidden lg:flex lg:col-span-1 relative rounded-[20px] overflow-hidden bg-[#0F0F0F] flex-col">
             <div className="relative flex-1 overflow-hidden">
               <img
                 src={HeroImage}
@@ -96,7 +95,7 @@ const Hero = () => {
                 className="absolute top-4 right-4 z-10 hover:scale-110 transition-transform duration-300"
               >
                 <img
-                  src={ArrowIcon}
+                  src={ButtonIcon}
                   alt="Explore"
                   className="w-20 h-20"
                 />

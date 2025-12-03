@@ -3,6 +3,7 @@ import Logo from '../../assets/images/Logo.svg';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState<string>('HOME');
 
   const navLinks = [
     { name: 'HOME', href: '#home' },
@@ -14,22 +15,36 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 py-4 pb-6">
       <div className="w-[95%] mx-auto bg-[#1A1A1A] rounded-xl px-8 py-4 flex items-center justify-between">
         <a href="#home">
           <img src={Logo} alt="NexGen" className="w-auto h-4" />
         </a>
 
         <div className="hidden lg:flex items-center gap-3">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="bg-[#0F0F0F] text-[#81807E] hover:text-[#E7BEB1] text-xs font-medium uppercase px-4 py-3 rounded-md transition-all duration-200"
-            >
-              {link.name}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = activeLink === link.name;
+            return (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setActiveLink(link.name);
+                  const targetId = link.href.replace('#', '');
+                  const el = document.getElementById(targetId);
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
+                className={`bg-[#0F0F0F] text-xs font-medium uppercase px-4 py-3 rounded-md transition-all duration-200 ${
+                  isActive ? 'text-[#E7BEB1]' : 'text-[#81807E] hover:text-[#E7BEB1]'
+                }`}
+              >
+                {link.name}
+              </a>
+            );
+          })}
 
           <a
             href="#contact"
@@ -72,16 +87,30 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="lg:hidden mt-2 bg-[#1A1A1A] rounded-[24px] px-6 py-4">
           <nav className="flex flex-col gap-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="bg-[#0F0F0F] text-[#81807E] hover:text-[#E7BEB1] text-sm font-medium uppercase px-5 py-3 rounded-[12px] transition-all duration-200"
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = activeLink === link.name;
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setActiveLink(link.name);
+                    setIsMobileMenuOpen(false);
+                    const targetId = link.href.replace('#', '');
+                    const el = document.getElementById(targetId);
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }}
+                  className={`bg-[#0F0F0F] text-sm font-medium uppercase px-5 py-3 rounded-[12px] transition-all duration-200 ${
+                    isActive ? 'text-[#E7BEB1]' : 'text-[#81807E] hover:text-[#E7BEB1]'
+                  }`}
+                >
+                  {link.name}
+                </a>
+              );
+            })}
             <a
               href="#contact"
               onClick={() => setIsMobileMenuOpen(false)}

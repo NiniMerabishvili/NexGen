@@ -26,7 +26,7 @@ const SocMedia = () => {
   const marqueeText = 'FOLLOW US ON SOCIAL MEDIA';
 
   return (
-    <section className="py-20">
+    <section id="cta" className="py-10">
       <div className="w-[95%] mx-auto flex flex-col gap-6">
         <div className="bg-[#CE7D63] rounded-xl p-12 flex flex-col lg:flex-row justify-between items-center gap-8">
           <div className="flex-1">
