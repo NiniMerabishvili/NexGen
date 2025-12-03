@@ -12,9 +12,9 @@ const TechnologiesCard = ({ technologies = ['React Native', 'Firebase', 'Redux',
       </h3>
 
       <div className="flex flex-wrap gap-2">
-        {techList.map((tech, index) => (
+        {techList.map((tech) => (
           <span
-            key={index}
+            key={tech}
             className="bg-[#1F1F1F] rounded-full px-4 py-2 text-white font-mono font-light text-[10px]"
           >
             {tech}

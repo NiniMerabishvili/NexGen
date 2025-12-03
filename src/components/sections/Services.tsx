@@ -12,9 +12,9 @@ const Services = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-          {servicesData.map((service, index) => (
+          {servicesData.map((service) => (
             <ServiceCard
-              key={index}
+              key={service.id}
               title={service.title}
               description={service.description}
               price={service.price}

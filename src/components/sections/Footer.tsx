@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import type { FormEvent } from 'react';
 import SocialCard from '../ui/SocialCard';
 import { useSocials } from '../../hooks/useSocials';
 import { useFooterLinks } from '../../hooks/useFooterLinks';
@@ -33,6 +35,111 @@ const getSocialIcon = (iconType: string) => {
     default:
       return null;
   }
+};
+
+const NewsletterForm = () => {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const validateEmail = (emailValue: string): boolean => {
+    if (!emailValue.trim()) {
+      setError('Email is required');
+      return false;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
+      setError('Please enter a valid email address');
+      return false;
+    }
+    setError('');
+    return true;
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    if (!validateEmail(email)) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitSuccess(false);
+
+    try {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setSubmitSuccess(true);
+      setEmail('');
+      setError('');
+      
+      setTimeout(() => setSubmitSuccess(false), 5000);
+    } catch (err) {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (value: string) => {
+    setEmail(value);
+    if (error) {
+      setError('');
+    }
+  };
+
+  return (
+    <form 
+      className="flex items-center gap-4 mt-2 md:mt-0 w-full md:w-auto" 
+      onSubmit={handleSubmit}
+      noValidate
+    >
+      <div className="flex-1 flex flex-col">
+        <input
+          id="newsletter-email"
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => handleChange(e.target.value)}
+          className="bg-transparent border-b-2 border-[#81807E] text-white placeholder:text-[#81807E] focus:outline-none focus:border-primary py-2 text-xs"
+          aria-invalid={error ? 'true' : 'false'}
+          aria-describedby={error ? 'newsletter-error' : undefined}
+          aria-label="Email address for newsletter subscription"
+        />
+        {error && (
+          <p id="newsletter-error" className="text-[10px] text-red-400 mt-1" role="alert">
+            {error}
+          </p>
+        )}
+        {submitSuccess && (
+          <p className="text-[10px] text-green-400 mt-1" role="status">
+            Successfully subscribed!
+          </p>
+        )}
+      </div>
+      <button
+        type="submit"
+        disabled={isSubmitting}
+        className="w-10 h-10 bg-[#1F1F1F] border border-[#2A2A2A] rounded-full flex items-center justify-center hover:border-primary transition-colors duration-200 flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed"
+        aria-label="Subscribe to newsletter"
+      >
+        <svg
+          className="w-4 h-4 text-[#E7BEB1]"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M7 17L17 7M17 7H7M17 7v10"
+          />
+        </svg>
+      </button>
+    </form>
+  );
 };
 
 const Footer = () => {
@@ -142,31 +249,7 @@ const Footer = () => {
                   Subscribe to our newsletter
                 </h3>
               </div>
-              <form className="flex items-center gap-4 mt-2 md:mt-0 w-full md:w-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 bg-transparent border-b-2 border-[#81807E] text-white placeholder:text-[#81807E] focus:outline-none focus:border-primary py-2 text-xs"
-                />
-                <button
-                  type="submit"
-                  className="w-10 h-10 bg-[#1F1F1F] border border-[#2A2A2A] rounded-full flex items-center justify-center hover:border-primary transition-colors duration-200 flex-shrink-0"
-                >
-                  <svg
-                    className="w-4 h-4 text-[#E7BEB1]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M7 17L17 7M17 7H7M17 7v10"
-                    />
-                  </svg>
-                </button>
-              </form>
+              <NewsletterForm />
             </div>
           </div>
 

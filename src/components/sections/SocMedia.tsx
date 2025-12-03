@@ -60,7 +60,7 @@ const SocMedia = () => {
         <div className="bg-[#1A1A1A] rounded-xl py-4 overflow-hidden">
           <div className="flex whitespace-nowrap" ref={marqueeRef}>
             {[...Array(10)].map((_, index) => (
-              <span key={index} className="flex items-center">
+              <span key={`marquee-${index}`} className="flex items-center">
                 <span className="text-medium text-[#81807E] uppercase px-4">
                   {marqueeText}
                 </span>

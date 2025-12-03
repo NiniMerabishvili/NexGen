@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import HeroImage from '../../assets/images/heroimage.png';
 import RightArrowIcon from '../../assets/icons/right-arrow.svg';
 import ButtonIcon from '../../assets/icons/button.svg';
+import { MARQUEE_REPETITIONS } from '../../constants';
 const Hero = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -69,8 +70,8 @@ const Hero = () => {
 
               <div className="-mx-7 bg-[#0F0F0F] rounded-xl py-4 overflow-hidden">
                 <div className="flex whitespace-nowrap px-10" ref={scrollRef}>
-                  {[...services, ...services, ...services, ...services].map((service, index) => (
-                    <span key={index} className="flex items-center">
+                  {Array.from({ length: MARQUEE_REPETITIONS }, () => services).flat().map((service, index) => (
+                    <span key={`${service}-${index}`} className="flex items-center">
                       <span className="text-sm text-[#676665] uppercase font-normal px-3">
                         {service}
                       </span>

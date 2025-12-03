@@ -14,13 +14,23 @@ const ReasonCard = ({ title, description }: ReasonCardProps) => {
         {description}
       </p>
 
-      <div className="flex items-center gap-4">
-        <div className="w-12 h-12 bg-[#0F0F0F] rounded-full flex items-center justify-center">
+      <button
+        onClick={() => {
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }}
+        className="flex items-center gap-4 hover:opacity-80 transition-opacity duration-200 cursor-pointer group"
+        aria-label="Learn more about our services"
+      >
+        <div className="w-12 h-12 bg-[#0F0F0F] rounded-full flex items-center justify-center group-hover:bg-[#1A1A1A] transition-colors duration-200">
           <svg
             className="w-6 h-6 text-[#E7BEB1]"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -31,7 +41,7 @@ const ReasonCard = ({ title, description }: ReasonCardProps) => {
           </svg>
         </div>
         <span className="text-sm text-white">Learn More</span>
-      </div>
+      </button>
     </div>
   );
 };

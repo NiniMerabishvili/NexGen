@@ -12,9 +12,9 @@ const Reasons = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
-          {reasonsData.map((reason, index) => (
+          {reasonsData.map((reason) => (
             <ReasonCard
-              key={index}
+              key={reason.id}
               title={reason.title}
               description={reason.description}
             />
