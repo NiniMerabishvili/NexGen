@@ -16,13 +16,13 @@ const ReasonCard = ({ title, description }: ReasonCardProps) => {
 
       <button
         onClick={() => {
-          const contactSection = document.getElementById('contact');
-          if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const projectsSection = document.getElementById('projects');
+          if (projectsSection) {
+            projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
         }}
         className="flex items-center gap-4 hover:opacity-80 transition-opacity duration-200 cursor-pointer group"
-        aria-label="Learn more about our services"
+        aria-label="Learn more about our projects"
       >
         <div className="w-12 h-12 bg-[#0F0F0F] rounded-full flex items-center justify-center group-hover:bg-[#1A1A1A] transition-colors duration-200">
           <svg
